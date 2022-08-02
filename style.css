@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: 245, 75%, 52%;
+
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background: var(--Pale-blue) url("./images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  display: flex;
+  font-family: "Red Hat Display", sans-serif;
+  justify-content: center;
+  margin: auto 25px;
+  min-height: 100vh;
+}
+
+p {
+  font-size: 16px;
+}
+
+#card {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 15px;
+  box-shadow: 0 15px 35px -20px hsl(var(--Bright-blue), 0.65);
+  color: var(--Desaturated-blue);
+  text-align: center;
+  width: 450px;
+}
+
+#hero-img {
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+}
+
+#order-descp {
+  display: grid;
+  padding: 40px 50px;
+  row-gap: 20px;
+}
+
+h1 {
+  color: var(--Dark-blue);
+}
+
+#plan {
+  align-items: center;
+  background-color: var(--Very-pale-blue);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+#plan div {
+  column-gap: 15px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+}
+
+#plan div img {
+  grid-row: 1/3;
+}
+
+#plan h4 {
+  color: var(--Dark-blue);
+}
+
+#plan a {
+  color: hsl(var(--Bright-blue));
+}
+
+#plan a:hover {
+  color: hsl(var(--Bright-blue), 0.85);
+  text-decoration: none;
+}
+
+button[type="submit"] {
+  background-color: hsl(var(--Bright-blue));
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 12px 35px -5px hsl(var(--Bright-blue), 0.65);
+  color: var(--Very-pale-blue);
+  font-weight: 700;
+  padding: 15px 30px;
+}
+
+button[type="submit"]:hover {
+  background-color: hsl(var(--Bright-blue), 0.85);
+  color: var(--Very-pale-blue);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: var(--Desaturated-blue);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+button:hover {
+  color: var(--Dark-blue);
+}
+
+/* Mobile design */
+@media screen and (min-width: 375px) and (max-width: 1439px) {
+  body {
+    background: var(--Pale-blue) url("./images/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 100vw;
+  }
+}
